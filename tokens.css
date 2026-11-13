@@ -1,0 +1,56 @@
+@font-face { font-family: 'Cormorant'; src: url('./assets/cormorant-0.ttf') format('truetype'); font-weight: 300 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Manrope'; src: url('./assets/manrope-0.ttf') format('truetype'); font-weight: 200 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Manrope'; src: url('./assets/manrope-1.ttf') format('truetype'); font-weight: 200 800; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+:root {
+  --font-display: 'Cormorant', Georgia, serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+  --color-paper: oklch(18.5% 0.011 65);
+  --color-paper-2: oklch(21.5% 0.013 65);
+  --color-paper-3: oklch(25% 0.014 65);
+  --color-ink: oklch(94.5% 0.022 82);
+  --color-ink-2: oklch(83% 0.022 75);
+  --color-muted: oklch(72% 0.022 70);
+  --color-rule: oklch(32% 0.019 65);
+  --color-rule-2: oklch(44% 0.021 65);
+  --color-accent: oklch(80% 0.14 65);
+  --color-accent-hover: oklch(86% 0.12 65);
+  --color-accent-ink: oklch(20% 0.02 65);
+  --color-focus: oklch(84% 0.14 65);
+  --color-clear: transparent;
+  --color-film: oklch(13% 0.011 65);
+  --color-shade: oklch(13% 0.011 65 / 0.94);
+  --color-shade-mid: oklch(13% 0.011 65 / 0.65);
+  --color-shade-faint: oklch(13% 0.011 65 / 0.02);
+  --color-bottom-shade: oklch(13% 0.011 65 / 0.9);
+  --color-header: oklch(16% 0.011 65 / 0.88);
+  --color-overlay: oklch(10% 0.01 65 / 0.78);
+  --color-ui: oklch(94% 0.022 82 / 0.16);
+  --color-outline: oklch(58% 0.04 65);
+  --text-display: clamp(5rem, 9.7vw, 9.5rem);
+  --text-section: clamp(3.4rem, 5.8vw, 5.6rem);
+  --text-title: 2.25rem;
+  --text-lead: 1.125rem;
+  --text-md: 1rem;
+  --text-sm: 0.8125rem;
+  --display-weight: 500;
+  --tracking-display: -0.045em;
+  --container: 1440px;
+  --gutter: 64px;
+  --gap-columns: 40px;
+  --radius-card: 4px;
+  --radius-pill: 999px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --section-gap-s: 100px;
+  --section-gap: 132px;
+  --section-gap-l: 160px;
+  --dur-micro: 100ms;
+  --dur-short: 180ms;
+  --dur-long: 360ms;
+  --ease-out: cubic-bezier(.2,.65,.25,1);
+}

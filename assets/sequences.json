@@ -1,0 +1,68 @@
+[
+  {
+    "id": "fire",
+    "source": "gemini_generated_video_6a0d9983.mp4",
+    "fps": 18,
+    "count": 108,
+    "start": 0,
+    "duration": 6,
+    "variants": {
+      "desktop": {
+        "bytes": 11310832,
+        "width": 1280,
+        "height": 720,
+        "avifBytes": 5165803
+      },
+      "mobile": {
+        "bytes": 7432754,
+        "width": 640,
+        "height": 640,
+        "avifBytes": 3460393
+      }
+    }
+  },
+  {
+    "id": "slice",
+    "source": "gemini_generated_video_40971322.mp4",
+    "fps": 18,
+    "count": 144,
+    "start": 1,
+    "duration": 8,
+    "variants": {
+      "desktop": {
+        "bytes": 12816434,
+        "width": 1280,
+        "height": 720,
+        "avifBytes": 6234614
+      },
+      "mobile": {
+        "bytes": 8566000,
+        "width": 640,
+        "height": 640,
+        "avifBytes": 4222479
+      }
+    }
+  },
+  {
+    "id": "wrap",
+    "source": "gemini_generated_video_10822c6e.mp4",
+    "fps": 18,
+    "count": 144,
+    "start": 1,
+    "duration": 8,
+    "variants": {
+      "desktop": {
+        "bytes": 9148576,
+        "width": 1280,
+        "height": 720,
+        "avifBytes": 4898417
+      },
+      "mobile": {
+        "bytes": 4265086,
+        "width": 640,
+        "height": 640,
+        "avifBytes": 2391753
+      }
+    }
+  }
+]

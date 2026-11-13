@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#161310">
+  <title>Жар. Шаурма с огнём</title>
+  <meta name="description" content="От вертела до первого укуса. Жар: шаурма, сочная начинка и хрустящий лаваш.">
+  <meta property="og:title" content="Жар. Шаурма с огнём">
+  <meta property="og:description" content="Весь вкус внутри. Посмотрите, как рождается шаурма.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./assets/fire-poster.webp" as="image" media="(min-width: 760px)" fetchpriority="high">
+  <link rel="preload" href="./assets/fire-mobile-poster.webp" as="image" media="(max-width: 759px)" fetchpriority="high">
+  <link rel="preload" href="./assets/cormorant-0.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#menu">Перейти к меню</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="wordmark" aria-label="Жар, на главную">жар<span aria-hidden="true">.</span></a>
+      <nav aria-label="Основная навигация" class="main-nav">
+        <a href="#story" data-scene-link="0">Как готовим</a>
+        <a href="#menu">Меню</a>
+        <a href="#visit">Где нас найти</a>
+      </nav>
+      <a href="#menu" class="nav-action">Выбрать вкус <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5"/></svg></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню"><span></span><span></span></button>
+    </div>
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Мобильная навигация" hidden>
+      <a href="#story" data-scene-link="0">Как готовим</a><a href="#menu">Меню</a><a href="#visit">Где нас найти</a>
+    </nav>
+  </header>
+  <main id="top">
+    <section id="story" class="story" aria-label="Как рождается шаурма">
+      <div class="story-stage hero">
+        <picture><source media="(max-width: 759px)" srcset="./assets/fire-mobile-poster.webp"><img class="story-poster" src="./assets/fire-poster.webp" width="1280" height="720" alt="Подрумяненное мясо на вертеле в тёплом свете гриля" fetchpriority="high"></picture>
+        <canvas id="food-canvas" aria-hidden="true"></canvas>
+        <div class="story-shade" aria-hidden="true"></div>
+        <div class="container story-content">
+          <div class="chapter is-current" data-chapter="0">
+            <span class="chapter-eyebrow">Огонь. Мясо. Ничего лишнего.</span><h1>Шаурма.<br>С огнём.</h1>
+            <p>Мясо с вертела, сочная начинка и хрустящий лаваш.</p>
+            <a class="button" href="#menu">Выбрать вкус <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5"/></svg></a>
+          </div>
+          <div class="chapter" data-chapter="1">
+            <span class="chapter-eyebrow">02 / Сочная история</span><h2>Тонкий срез.<br>Яркий вкус.</h2>
+            <p>Поджаристая корочка. Нежное мясо. Всё в одном укусе.</p>
+            <a class="text-link" href="#menu">Посмотреть меню</a>
+          </div>
+          <div class="chapter" data-chapter="2">
+            <span class="chapter-eyebrow">03 / Последний штрих</span><h2>Всё хорошее.<br>Внутри.</h2>
+            <p>Остаётся завернуть. И сделать первый хрустящий укус.</p>
+            <a class="button" href="#menu">Хочу попробовать <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5"/></svg></a>
+          </div>
+        </div>
+        <div class="container stage-bottom">
+          <button class="scroll-invite" type="button" data-next-scene><svg width="18" height="24" viewBox="0 0 18 24" fill="none" aria-hidden="true"><rect x="1" y="1" width="16" height="22" rx="8" stroke="currentColor"/><path d="M9 6v5" stroke="currentColor"/></svg><span>Листайте. Вкус раскрывается.</span></button>
+          <nav class="chapter-nav" aria-label="Сцены приготовления">
+            <button class="chapter-button is-active" type="button" data-scene="0" aria-current="step"><span><b>01</b> На огне</span><span class="chapter-track" aria-hidden="true"><i></i></span></button>
+            <button class="chapter-button" type="button" data-scene="1"><span><b>02</b> Тонкий срез</span><span class="chapter-track" aria-hidden="true"><i></i></span></button>
+            <button class="chapter-button" type="button" data-scene="2"><span><b>03</b> Первый укус</span><span class="chapter-track" aria-hidden="true"><i></i></span></button>
+          </nav>
+          <button class="motion-toggle" type="button" aria-pressed="false" aria-label="Выключить анимацию"><svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3v10M11 3v10" stroke="currentColor" stroke-width="2"/></svg><span>Без анимации</span></button>
+        </div>
+      </div>
+      <div class="static-story container">
+        <figure><img src="./assets/slice-poster.webp" width="1280" height="720" alt="Нарезка мяса с вертела" loading="lazy"><figcaption>Тонкий срез. Яркий вкус.</figcaption></figure>
+        <figure><img src="./assets/wrap-poster.webp" width="1280" height="720" alt="Готовая шаурма на тарелке" loading="lazy"><figcaption>Всё хорошее внутри.</figcaption></figure>
+      </div>
+    </section>
+    <section class="menu-section section" id="menu">
+      <div class="container">
+        <div class="section-head"><h2>У каждого<br>свой жар.</h2><div><p class="lead">Сочно, пряно или с огоньком.<br>Выбирайте под настроение.</p><p class="demo-note">Варианты для демонстрации. Меню и цены уточняются.</p></div></div>
+        <div class="menu-grid">
+          <article class="dish dish-featured">
+            <div class="dish-image"><img src="./assets/wrap-poster.webp" width="1280" height="720" loading="lazy" alt="Шаурма в поджаренном лаваше на тарелке"></div>
+            <div class="dish-info"><div><h3>Та самая классика</h3><p>Мясо, овощи, зелень и чесночный соус.</p></div><button class="dish-action" type="button" data-dish="classic" aria-label="Подробнее: Та самая классика"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5"/></svg></button></div>
+          </article>
+          <div class="menu-variations">
+            <article class="dish dish-row"><div class="dish-info"><h3>С огоньком</h3><p>Классическая начинка с острым акцентом.</p><button class="text-link" type="button" data-dish="hot">Выбрать остроту</button></div><span class="taste-symbol" aria-hidden="true">ж.</span></article>
+            <article class="dish dish-row"><div class="dish-info"><h3>Больше свежести</h3><p>Больше овощей и зелени. Соус на ваш вкус.</p><button class="text-link" type="button" data-dish="fresh">Посмотреть состав</button></div><span class="taste-symbol taste-outline" aria-hidden="true">з.</span></article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ingredients-section section" id="taste">
+      <div class="container ingredients-layout"><h2>Вкус складывается<br>из простого.</h2><dl class="ingredients-list"><div><dt>Мясо с вертела</dt><dd>Тонкий срез с поджаристой корочкой.</dd></div><div><dt>Свежие овощи</dt><dd>Хруст и сочность в каждом укусе.</dd></div><div><dt>Соус и зелень</dt><dd>Последний штрих, который всё связывает.</dd></div><div><dt>Тёплый лаваш</dt><dd>Держит самое вкусное внутри.</dd></div></dl></div>
+    </section>
+    <section class="visit-section section" id="visit">
+      <div class="container visit-layout"><div><h2>Заглядывайте<br>на жар.</h2><p class="lead">За первым укусом.<br>И за следующим тоже.</p></div><div class="visit-details"><p>Демонстрационная версия сайта шаурмичной.</p><dl><div><dt>Где нас найти</dt><dd><span class="fill" data-fill="address">Адрес уточняется</span></dd></div><div><dt>Когда приходить</dt><dd><span class="fill" data-fill="hours">График уточняется</span></dd></div></dl><p class="visit-note">Онлайн-заказ пока недоступен.</p><a href="#menu" class="text-link">Пока выбрать вкус</a></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-top"><a class="wordmark" href="#top" aria-label="Жар, вернуться наверх">жар<span aria-hidden="true">.</span></a><p>Весь вкус внутри.</p><a href="#top" class="back-top">Наверх <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" stroke="currentColor" stroke-width="1.5"/></svg></a></div><div class="footer-bottom"><span>Концепция шаурмичной «Жар»</span><span>Видеосцены созданы с помощью ИИ.</span></div></div></footer>
+  <dialog id="dish-dialog" aria-labelledby="dish-title"><form method="dialog"><button class="dialog-close" aria-label="Закрыть" type="submit"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.5"/></svg></button></form><h2 id="dish-title">Та самая классика</h2><p id="dish-description"></p><fieldset class="spice-options"><legend>Какую остроту предпочитаете?</legend><label><input type="radio" name="spice" value="Без острого" checked><span>Без острого</span></label><label><input type="radio" name="spice" value="Чуть-чуть огня"><span>Чуть-чуть огня</span></label><label><input type="radio" name="spice" value="Погорячее"><span>Погорячее</span></label></fieldset><p class="choice-summary" aria-live="polite"></p><p class="dialog-note">Демонстрационный состав. Меню, цены и приём заказов появятся после уточнения.</p><button class="button" type="button" id="copy-choice">Скопировать мой выбор</button><p class="copy-status" role="status"></p></dialog>
+</body>
+</html>

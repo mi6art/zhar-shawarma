@@ -2,6 +2,9 @@
   'use strict';
   const root = document.documentElement;
   root.classList.add('js');
+  if (window.initMobileStory && matchMedia('(max-width: 759px), (pointer: coarse)').matches) {
+    window.initMobileStory();
+  } else {
   const motionQuery = matchMedia('(prefers-reduced-motion: reduce)');
   let motionEnabled = !motionQuery.matches;
   let manuallyDisabled = false;
@@ -175,8 +178,15 @@
     requestTick();
   }
   function resize() {
-    width = stage.clientWidth;
-    height = stage.clientHeight;
+    const nextWidth = stage.clientWidth;
+    const nextHeight = stage.clientHeight;
+    if (nextWidth === width && nextHeight === height) {
+      storyTop = scrollY + story.getBoundingClientRect().top;
+      travel = Math.max(1, story.offsetHeight - stage.offsetHeight);
+      onScroll(); return;
+    }
+    width = nextWidth;
+    height = nextHeight;
     const nextVariant = width < 760 ? 'mobile' : 'desktop';
     if (nextVariant !== variant) {
       variant = nextVariant; generation++; cache.clear(); posters.clear(); pending.clear(); failed.clear(); queue = []; lastWarm = ''; activeFrame = -1;
@@ -243,6 +253,7 @@
   }).observe(story);
   setMotion();
 
+  }
   const menuToggle = document.querySelector('.menu-toggle');
   const mobileMenu = document.querySelector('#mobile-menu');
   function closeMenu() { mobileMenu.hidden = true; menuToggle.setAttribute('aria-expanded', 'false'); menuToggle.setAttribute('aria-label', 'Открыть меню'); }

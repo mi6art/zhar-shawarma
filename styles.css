@@ -217,3 +217,14 @@ dialog h2 { margin-bottom: var(--space-md); font-size: 52px; line-height: .95; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
+/* Native mobile video layers: no per-frame canvas resize or image decode on a swipe. */
+.story-video, .motion-poster { display: none; }
+.video-motion.motion-enabled #food-canvas { display: none; }
+.video-motion.motion-enabled .story-video, .video-motion.motion-enabled .motion-poster { display: block; position: absolute; top: 35%; left: 0; width: 100%; height: 65%; object-fit: cover; pointer-events: none; }
+.video-motion.motion-enabled .motion-poster { z-index: -4; }
+.video-motion.motion-enabled .story-video { z-index: -3; opacity: 0; transition: opacity 100ms linear; }
+.video-motion.motion-enabled .story-video.is-current.is-ready { opacity: 1; }
+@media (min-width: 760px) {
+ .video-motion.motion-enabled .story-video, .video-motion.motion-enabled .motion-poster { top: 0; left: 35%; width: 65%; height: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .story-video, .motion-poster { display: none !important; } }
